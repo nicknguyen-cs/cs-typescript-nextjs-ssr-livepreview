@@ -1,3 +1,4 @@
+import ContentstackLivePreview from "@contentstack/live-preview-utils";
 import Head from "next/head";
 import { getEntry, Stack } from "../sdk/index";
 export default function Home(props: any) {
@@ -172,6 +173,10 @@ export default function Home(props: any) {
     </div>
   );
 }
+
+ContentstackLivePreview.init({
+  enable: true,
+});
 
 export const getServerSideProps = async (context: any) => {
   console.log(context.query);
